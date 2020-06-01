@@ -1,5 +1,5 @@
 body {
-  background-color:green;
+  background-color:pink;
   size(640,360);
   background-position: center;
 }
@@ -8,8 +8,17 @@ body {
 #container { width:600px; margin:0 auto; }
 
 
-#myCanvas2 { background:red; border:1px solid #cbcbcb; }
-#container2 { width:600px; margin:0 auto; }
+/* #move_box { background:red; border:1px solid #cbcbcb; }
+#move_box { width:600px; margin:0 auto; } */
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.blue {
+  background: #00f;
+}
 /* #circle {
   background(50);
   fill(150);
