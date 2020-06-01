@@ -7,22 +7,31 @@
   <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
   <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
   <script language="javascript" type="text/javascript" src="theJumpingBall.js"></script>
+  <script language="javascript" type="text/javascript" src="theNewJumpingBall.js"></script>
   <link rel="stylesheet" href="index.css">
 
-  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
-
-  <!-- This line removes any default padding and style.
-       You might only need one of these values set. -->
-  <!-- <style> body { padding: 0; margin: 0; } </style> -->
 </head>
 
 <body onLoad="init();">
+
+  <div id="container">
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+  </div>
+
 <div id="container">
-  <canvas id="myCanvas" width="300" height="300"></canvas>
+the moving box
 </div>
-<div id="container2">
-  <canvas id="myCanvas2" width="300" height="300"></canvas>
-</div>
+
+  <div id="container">
+    <form>
+      <div id="littleBox" style="background-color:black; position: inherit;; width:10px; height:10px; top:0px; left:0px;"></div>
+      <p>Click the buttons below to handle animation</p>
+      <input type="button" value="Start" onclick="moveRight();" />
+      <input type="button" value="Stop" onclick="stop();" />
+    </form>
+  </div>
+
+
 </body>
 
 </html>

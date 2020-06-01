@@ -1,19 +1,20 @@
+var boxObj = null;
+var animate;
+
 function init() {
-  context = myCanvas2.getContext('2d');
-  setInterval(draw, 10);
+  boxObj = document.getElementById('littleBox');
+  boxObj.style.position = 'relative';
+  boxObj.style.left = '0px';
 }
 
-function setup() {
-  context.size(300, 300);
-  context.background(50);
+function moveRight() {
+  boxObj.style.left = parseInt(boxObj.style.left) + 10 + 'px';
+  animate = setTimeout(moveRight, 20); // call moveRight in 20msec
 }
 
-
-function draw() {
-  context.stroke(255);
-  context.line(pmouseX, pmouseY, mouseX, mouseY);
+function stop() {
+  clearTimeout(animate);
+  boxObj.style.left = '0px';
 }
 
-function mousePressed() {
- context.background(50);
-}
+window.onload = init;
